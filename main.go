@@ -7,7 +7,7 @@ import (
 
 func main() {
 	fmt.Println("Hi, guys!")
-	r := String.EndsWith("aaabc", "ca")
-	fmt.Println(r)
+	a := String.PadStart("11223", 15, "abc")
+	fmt.Println(a)
 	return
 }
