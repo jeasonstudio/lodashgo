@@ -10,3 +10,7 @@ godoc -http=:6060
 ```
 go test loadshgo/Test
 ```
+
+## Dependency Management
+
+We use dep to manage our packages. See [Usage](https://github.com/golang/dep)
