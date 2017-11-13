@@ -13,6 +13,12 @@ lodashgo is a GoLang library as lodash.js to JavaScript
                                                       \_/__/       
 ```
 
+## install
+
+```
+$ go get -u github.com/jeasonstudio/lodashgo
+```
+
 ### godoc
 ```
 godoc -http=:6060
