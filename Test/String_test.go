@@ -1,6 +1,7 @@
 package Test
 
 import (
+	"lodashgo/Util"
 	"lodashgo/String"
 	"testing"
 )
@@ -26,4 +27,25 @@ func Test_String_PadEnd(t *testing.T) {
 	if r1 != "abb" { t.Error("Error @ PadEnd") }
 	r2 := String.PadEnd("asdf", 2, "bc")
 	if r2 != "asdf" { t.Error("Error @ PadEnd") }
+}
+
+func Test_String_UniqueID(t *testing.T) {
+	d := Util.UniqueID("")
+	a := Util.UniqueID("a")
+	b := Util.UniqueID("b")
+	if d() != "LODASHGO_DEFAULT_1" {
+		t.Error("Error @ UniqueID")
+	}
+	if a() != "a1" {
+		t.Error("Error @ UniqueID")
+	}
+	if a() != "a2" {
+		t.Error("Error @ UniqueID")
+	}
+	if b() != "b1" {
+		t.Error("Error @ UniqueID")
+	}
+	if a() != "a3" {
+		t.Error("Error @ UniqueID")
+	}
 }
