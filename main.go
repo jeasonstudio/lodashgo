@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	fmt.Println("Hi, guys!")
 	// a := [] int {2}
 	// b := [] string {"s", "aa"}
