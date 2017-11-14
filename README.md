@@ -26,7 +26,7 @@ godoc -http=:6060
 
 ### gotest
 ```
-go test loadshgo/Test
+$ go test lodashgo/Array lodashgo/String lodashgo/Util
 ```
 
 ## Dependency Management
