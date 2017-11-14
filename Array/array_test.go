@@ -53,3 +53,37 @@ func Test_Array_UnSafeChunk(t *testing.T) {
 // 		t.Log("Test_Array_Compact Passed")
 // 	}
 // }
+
+func Test_Array_IntReduce(t *testing.T) {
+	t1 := []int{1, 2, 3, 4}
+	reduceInt := func(accumulator interface{}, currentValue, currentIndex int, array []int) interface{} {
+		switch accumulator.(type) {
+		case int:
+			return accumulator.(int) + currentValue
+		default:
+			t.Error("Error @ IntReduce")
+			return nil
+		}
+	}
+	r1, e1 := IntReduce(t1, reduceInt)
+	if e1 != nil || r1 != 10 {
+		t.Error("Error @ IntReduce")
+	}
+}
+
+func Test_Array_StringReduce(t *testing.T) {
+	t1 := []string{"a", "b", "c", "d"}
+	reduceString := func(accumulator interface{}, currentValue string, currentIndex int, array []string) interface{} {
+		switch accumulator.(type) {
+		case string:
+			return accumulator.(string) + currentValue
+		default:
+			t.Error("Error @ IntReduce")
+			return nil
+		}
+	}
+	r1, e1 := StringReduce(t1, reduceString)
+	if e1 != nil || r1 != "abcd" {
+		t.Error("Error @ IntReduce")
+	}
+}
